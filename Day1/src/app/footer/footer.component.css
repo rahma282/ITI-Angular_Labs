@@ -1,0 +1,50 @@
+footer{
+  color: white;
+  background-color: black;
+}
+.button{
+  border-color:white;
+  border-radius: 1px;
+  background-color: black;
+  color: white;
+  display: block;
+  margin: auto;
+  padding: 10px;
+}
+.f{
+  padding: 16px;
+}
+#fG{
+  background-color: white;
+  color: black;
+
+}
+#fbIcon{
+  background-color: white;
+  color: black;
+}
+#f{
+  background-color: black;
+  color: white;
+}
+#fG, #fbIcon, #f {
+  display: inline-block;
+  margin-left: 10px;
+  margin-bottom: 50px;
+  margin-right: 20px;
+  padding: 10px;
+}
+.contact {
+  display: flex;
+  justify-content: flex-end;
+}
+#mobile{
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: 20px;
+  margin-right: auto;
+  margin-bottom: 50px;
+  padding: 10px;
+  color: rgb(218, 198, 236);
+}

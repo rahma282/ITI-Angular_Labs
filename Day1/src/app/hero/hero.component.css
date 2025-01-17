@@ -1,0 +1,31 @@
+.hero-banner {
+  background-image: url('/img.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 95vh;
+  color: white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 3px;
+}
+.hero-banner h2, .hero-banner h3 {
+  margin: 0;
+  padding-left: 50px;
+}
+
+.hero-banner h2 {
+  font-size: 36px;
+  font-family: 'Arial', sans-serif;
+  font-style:oblique
+}
+
+.hero-banner h3 {
+  font-size: 24px;
+  font-family: 'Arial', sans-serif;
+  margin-top: 10px;
+  font-style: italic;
+}
+
+

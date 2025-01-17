@@ -1,0 +1,31 @@
+.skills{
+  background-color: rgb(63, 63, 63);
+  color: white;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.sk{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  padding: 16px;
+}
+.sk h2{
+  text-shadow: 2px 2px #a89a9a;
+}
+.style {
+  display: flex;
+  height: 70vh;
+}
+.left-section {
+  flex: .2;
+  padding: 20px;
+}
+
+.right-section {
+  flex: 1;
+  padding: 20px;
+  text-align: center;
+}
+
