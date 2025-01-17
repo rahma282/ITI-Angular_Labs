@@ -1,0 +1,17 @@
+<div class="card h-100 text-center p-3" style="border: 1px solid #ccc; border-radius: 10px;">
+  <img [src]="user.image" class="card-img-top mx-auto"
+       style="border-radius: 50%; border: 2px solid #b4a3a3; width: 150px; height: 150px; object-fit: cover;"
+       alt="User Image" />
+  <div class="card-body">
+    <p class="card-title"
+       [ngStyle]="{'background-color': user.role === 'admin' ? 'red' : user.role === 'user' ? 'green' : '#FFD700'}"
+       style="color: white; padding: 8px; border-radius: 5px;">
+      {{user.role}}
+    </p>
+    <p class="card-text">{{user.firstName}}</p>
+    <p class="card-text">{{user.email}}</p>
+    <p class="card-text">{{user.phone}}</p>
+    <p class="card-text">{{user.birthDate}}</p>
+  </div>
+</div>
+
