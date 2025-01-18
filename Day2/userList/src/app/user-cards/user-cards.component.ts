@@ -9,7 +9,5 @@ import { CommonModule } from '@angular/common';
 })
 export class UserCardsComponent {
   @Input() user : any;
-  Search(email:string){
-    
-  }
+  
 }

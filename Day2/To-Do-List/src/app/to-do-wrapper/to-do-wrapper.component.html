@@ -1,0 +1,7 @@
+<div class="taskwrapper">
+<h3>Task Wrapper</h3>
+<hr>
+<app-to-do-form (sendToParent)="recieveFromChild($event)"></app-to-do-form>
+<app-to-do-list [tasks]="toDos" (handleDeleteTask)="DeleteTask($event)"></app-to-do-list>
+</div>
+
