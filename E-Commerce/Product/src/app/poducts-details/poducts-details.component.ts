@@ -24,6 +24,10 @@ ngOnInit() {
     console.log(this.product)
     console.log(this.id);
 }
+handleAddTOCard(id:number){
+  this.counterService.getCounter().subscribe((res)=>this.counter=res);
+  this.counterService.setCounter(this.counter+1);
+}
 decreaseCounter(){
   if (this.counter>0){
     this.counterService.setCounter(this.counter-1);
