@@ -1,0 +1,90 @@
+<div class="container my-5">
+  <form [formGroup]="registerForm" (ngSubmit)="handleRegisterForm()">
+    <div class="mb-3">
+      <label for="name" class="form-label">Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="name"
+        aria-describedby="recipeHelp"
+        formControlName="name"
+      />
+      @if(registerForm.controls['name'].hasError('required')){
+      <div id="recipeHelp" class="form-text text-danger">Required</div>
+      }
+
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">Email</label>
+      <input
+        type="text"
+        class="form-control"
+        id="email"
+        formControlName="email"
+      />
+
+      @if(registerForm.controls['email'].invalid && registerForm.controls['email'].touched){
+      @if(registerForm.controls['email'].hasError('required')){
+      <div id="recipeHelp" class="form-text text-danger">Required</div>
+      } @else if(registerForm.controls['email'].hasError('pattern')){
+      <div id="recipeHelp" class="form-text text-danger">Email is invaild please enter a vaild email</div>
+      } }
+
+    </div>
+    <div class="mb-3">
+      <label for="userName" class="form-label">UserName</label>
+      <input
+        type="text"
+        class="form-control"
+        id="userName"
+        formControlName="userName"
+      />
+      @if(registerForm.controls['userName'].invalid && registerForm.controls['userName'].touched){
+      @if(registerForm.controls['userName'].hasError('required')){
+      <div id="recipeHelp" class="form-text text-danger">Required</div>
+      } @else if(registerForm.controls['userName'].hasError('pattern')){
+      <div id="recipeHelp" class="form-text text-danger">UserName must not have spaces</div>
+      }
+    }
+
+    </div>
+
+    <div class="mb-3">
+      <label for="password" class="form-label">Password</label>
+      <input
+        type="password"
+        class="form-control"
+        id="password"
+        formControlName="password"
+      />
+      @if(registerForm.controls['password'].invalid && registerForm.controls['password'].touched){
+      @if(registerForm.controls['password'].hasError('required')){
+      <div id="recipeHelp" class="form-text text-danger">Required</div>
+      } @else if(registerForm.controls['password'].hasError('pattern')){
+      <div id="recipeHelp" class="form-text text-danger">Password must have at least 8 characters, including letters and numbers</div>
+      }
+    }
+
+    </div>
+    <div class="mb-3">
+      <label for="confirmPassword" class="form-label">Confirm Password</label>
+      <input
+        type="password"
+        class="form-control"
+        id="confirmPassword"
+        formControlName="confirmPassword"
+      />
+      @if(registerForm.controls['confirmPassword'].invalid && registerForm.controls['confirmPassword']){
+      @if(registerForm.controls['confirmPassword'].hasError('required')){
+      <div id="recipeHelp" class="form-text text-danger">Required</div>
+      }@else if (registerForm.controls['confirmPassword'].hasError('passwordMismatch')){
+        <div id="recipeHelp" class="form-text text-danger"> Passwords do not match</div>
+        }
+    }
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]="registerForm.invalid">Register</button>
+    <h4 style="margin-top: 30px;">Already have account! <a routerLink="/form-login" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">login</a></h4>
+  </form>
+</div>
+
+

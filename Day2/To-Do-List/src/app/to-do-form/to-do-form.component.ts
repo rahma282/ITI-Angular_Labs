@@ -12,6 +12,7 @@ export class ToDoFormComponent {
   addNewTask(value: string) {
     if(value.trim()){
       this.sendToParent.emit(value);
+      value =''
     }else {
       console.error('Empty task value, not emitted.');
     }

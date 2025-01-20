@@ -1,0 +1,12 @@
+<div class="d mt-5 mb-5">
+  <h4 style="margin-left: 20px; text-shadow: 2px 2px #a89a9a;">Welcome to our shopping website, start browsing...</h4>
+</div>
+<div class="container my-5">
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+      @for(product of products; track product;) {
+        <div class="col">
+          <app-card [product]="product"></app-card>
+        </div>
+      }
+</div>
+</div>

@@ -1,0 +1,49 @@
+
+.navbar {
+  background-color: #e5e7e9;
+  box-shadow: 0 4px 6px rgba(7, 0, 0, 0.288);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.navbar-nav .nav-link {
+  font-size: 1rem;
+  margin-right: 20px;
+  margin: 10px 0;
+  color: #000000;
+  transition: color 0.3s, background-color 0.3s;
+  text-decoration: none;
+
+}
+
+.navbar-nav .nav-link.active-link {
+  color: #08386e;
+  background-color: #f2eff3;
+  border-radius: 4px;
+  padding: 5px 10px;
+}
+
+
+#list + * {
+  margin-left: 1000px;
+}
+.cart-icon-container {
+  position: relative;
+  display: inline-block;
+}
+
+.cart-counter {
+  position: absolute;
+  top: -10px; /* Adjust based on your layout */
+  right: -10px; /* Adjust based on your layout */
+  background-color: red;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 50%;
+  padding: 2px 6px;
+  line-height: 1;
+  text-align: center;
+}

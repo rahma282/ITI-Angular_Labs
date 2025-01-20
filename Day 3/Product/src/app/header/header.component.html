@@ -1,0 +1,17 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link" id="list" routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">Products List</a>
+        <a class="nav-link" id="register" routerLink="/form-register" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">Register</a>
+        <a class="nav-link" routerLink="/form-login" routerLinkActive="active-link">Login</a>
+        <a class="nav-link" routerLink="/card-shop" routerLinkActive="active-link">
+          <div class="cart-icon-container">
+            <span class="cart-counter">{{ counter }}</span>
+            <i class="fas fa-cart-shopping"></i>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>

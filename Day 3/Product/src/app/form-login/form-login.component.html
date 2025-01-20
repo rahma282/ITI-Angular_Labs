@@ -1,0 +1,48 @@
+<div class="form-container">
+<form #login="ngForm" (ngSubmit)="handleLogin(login)">
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email address</label>
+    <input
+    type="email"
+    class="form-control"
+    id="login-email"
+    aria-describedby="emailHelp"
+    name="email"
+    [(ngModel)]="formValues.email"
+    required
+    #Email="ngModel"
+    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+    >
+    @if(Email.invalid && Email.touched){
+      @if(Email.errors?.['required']){
+      <div id="recipeHelp" class="form-text text-danger">Email is required</div>
+      }@else if(Email.errors?.['pattern']){
+        <div id="recipeHelp" class="form-text text-danger">Please enter a valid email address</div>
+        }
+    }
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Password</label>
+    <input
+    type="password"
+    class="form-control"
+    id="login-password"
+    name="password"
+    [(ngModel)]="formValues.password"
+    required
+    minlength="8"
+    #Password="ngModel"
+    >
+    @if(Password.invalid && Password.touched){
+      @if(Password.errors?.['required']){
+      <div id="recipeHelp" class="form-text text-danger">Password is required</div>
+      } @else if(Password.errors?.['minlength']){
+      <div id="recipeHelp" class="form-text text-danger">Password must be at least 8 characters long</div>
+      } }
+  </div>
+  <button type="submit" class="btn btn-primary" [disabled]="login.invalid">Submit</button>
+
+<h4 class="form-heading">Don't have account?<a routerLink="/form-register" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">Register</a></h4>
+</form>
+</div>
+

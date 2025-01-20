@@ -1,0 +1,36 @@
+.form-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+form {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  max-height: 600px;
+  max-width: 600px;
+  width: 100%;
+}
+
+.form-heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.mb-3 {
+  margin-bottom: 15px;
+}
