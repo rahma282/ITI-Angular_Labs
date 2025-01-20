@@ -1,25 +1,25 @@
 import { CounterService } from './../service/counter-service.service';
 import { CommonModule } from '@angular/common';
-import { Component, inject, Input ,OnInit} from '@angular/core';
-import productsData from '../../products.json'
+import { Component, inject, Input} from '@angular/core';
+import { HttpService } from '../service/http.service';
 @Component({
   selector: 'app-poducts-details',
   imports: [CommonModule],
   templateUrl: './poducts-details.component.html',
   styleUrl: './poducts-details.component.css'
 })
-export class PoductsDetailsComponent implements OnInit{
-  products :Array<any> = [];
-  @Input() id : number=0;
+export class PoductsDetailsComponent {
+  //products :Array<any> = [];
+  @Input() id : string='';
   counter:number=0;
+
     counterService = inject(CounterService);
-    constructor(){}
-  product: any;
+    productDetails = inject(HttpService)
+    product: any;
 
 
 ngOnInit() {
-    this.products = productsData.products;
-    this.product = this.products.find((e:any)=>e.id == this.id);
+    this.productDetails.getProductDetails(this.id).subscribe((res)=>this.product=res)
     this.counterService.getCounter().subscribe((res)=>this.counter=res);
     console.log(this.product)
     console.log(this.id);

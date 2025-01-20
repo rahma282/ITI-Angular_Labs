@@ -8,12 +8,12 @@ import { CounterService } from '../service/counter-service.service';
   selector: 'app-card',
   imports: [CommonModule],
   templateUrl: './card.component.html',
-  styleUrl: './card.component.css'
+  styleUrls: ['./card.component.css']
 })
 export class CardComponent {
   counter:number=0;
   @Input() product : any;
-
+  CardProducts:any =[];
   counterService = inject(CounterService);
 
   constructor(private router: Router){}
@@ -24,7 +24,9 @@ handleRedirect(id: number){
 handleAddTOCard(id:number){
   this.counterService.getCounter().subscribe((res)=>this.counter=res);
   this.counterService.setCounter(this.counter+1);
-  
+  if (!this.CardProducts.includes(id)) {
+    this.CardProducts.push(id);
+  }  //then take array of ids and use it on card shop component
 }
 
 }
