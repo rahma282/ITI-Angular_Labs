@@ -1,28 +1,29 @@
 <h3 style="margin: 10px">Card</h3>
 <div class="container m-5">
-  <div *ngFor="let product of filteredProducts" class="product-card">
-    <div class="product-box">
-      <div class="product-image">
-        <img [src]="product.thumbnail" [alt]="product.title" class="main-image" />
-      </div>
-      <div class="product-details">
-        <div class="product-title">{{ product.title }}</div>
-        <div class="product-price">{{ product.price | currency : 'EGP' }}</div>
-      </div>
-      <div class="quantity-control">
-        <button (click)="decreaseCounter(product.id)">-</button>
-        <input
-          type="text"
-          [value]="productCounters[product.id]"
-          min="1"
-          disabled
-          style="font-weight: bold; color: black"
-        />
-        <button (click)="increaseCounter(product.id)">+</button>
-        <button (click)="deleteCard(product.id)">x</button>
+  @for (product of filteredProducts; track product) {
+    <div class="product-card">
+      <div class="product-box">
+        <div class="product-image">
+          <img [src]="product.thumbnail" [alt]="product.title" class="main-image" />
+        </div>
+        <div class="product-details">
+          <div class="product-title">{{ product.title }}</div>
+          <div class="product-price">{{ product.price | currency : 'EGP' }}</div>
+        </div>
+        <div class="quantity-control">
+          <button (click)="decreaseCounter(product.id)">-</button>
+          <input
+            type="text"
+            [value]="productCounters[product.id]"
+            min="1"
+            disabled
+            style="font-weight: bold; color: black"
+          />
+          <button (click)="increaseCounter(product.id)">+</button>
+          <button (click)="deleteCard(product.id)">x</button>
+        </div>
       </div>
     </div>
-  </div>
-
+  }
   <button class="btn btn-light">Check out</button>
 </div>

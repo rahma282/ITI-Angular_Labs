@@ -10,8 +10,10 @@
     <p class="card-text" style="font-weight: bold; display: flex; flex-direction: column; min-height: 50px;">{{product.title}}</p>
     <p class="card-text" style="font-weight: bold;">{{product.price |currency:'EGP'}}</p>
     <p class="card-text" style="font-weight: bold;">Rating: {{product.rating}}</p>
-    <button type="button" class="btn btn-outline-success" style="border: 1px solid black; border-radius: 15px; color: black; margin: 10px;"  onmouseover="this.style.color='white';" onmouseout="this.style.color='black';"  (click)="handleAddTOCard(product.id)">Add to card</button>
-    <button type="button" class="btn btn-outline-light" style="border: 1px solid black; border-radius: 15px; color: black;"(click)="handleRedirect(product.id)">See More Details</button>
+    <button type="button" class="btn btn-outline-success" style="border: 1px solid black; border-radius: 15px; color: black; margin: 10px;"  onmouseover="this.style.color='white';" onmouseout="this.style.color='black';"
+    (click)="handleAddTOCard(product.id)">Add to card</button>
+    <button type="button" class="btn btn-outline-light" style="border: 1px solid black; border-radius: 15px; color: black;"
+    (click)="handleRedirect(product.id)">See More Details</button>
   </div>
 </div>
 
