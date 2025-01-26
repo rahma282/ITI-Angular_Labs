@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { CounterService } from '../service/counter-service.service';
 import { HttpService } from '../service/http.service';
 import { CardServiceService } from '../service/card-service.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-card-shop',
@@ -21,6 +22,7 @@ export class CardShopComponent {
   counterService = inject(CounterService);
   productList = inject(HttpService);
   cardService = inject(CardServiceService);
+  router = inject(Router);
 
   ngOnInit() {
     // get card product ids
@@ -90,4 +92,9 @@ export class CardShopComponent {
     console.log(`Product with ID ${productId} deleted.`);
     console.log('Updated Total Counter:', this.totalCounter);
   }
+
+  navigateToRegister() {
+    this.router.navigate(['/form-register']); // Navigate to the register form
+  }
 }
+

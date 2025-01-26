@@ -19,4 +19,5 @@ export class CardServiceService {
       this.card.next([...currentCard, newId]);
     }
   }
+  
 }

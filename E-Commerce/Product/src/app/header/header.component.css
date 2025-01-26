@@ -1,4 +1,15 @@
 
+body {
+  margin-top: 60px;
+}
+
+.fixed-top {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1030;
+}
+
 .navbar {
   background-color: #e5e7e9;
   box-shadow: 0 4px 6px rgba(7, 0, 0, 0.288);

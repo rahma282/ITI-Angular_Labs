@@ -4,7 +4,7 @@
        alt="product Image" />
   <div class="card-body">
     <p class="card-title"
-    [ngStyle]="{'background-color': product.stock === 0 ? 'red' : 'green', 'border-radius': '15px', 'padding': '5px', 'color': 'white'}">
+    [ngStyle]="{'background-color': product.stock < 7 ? 'red' : 'green', 'border-radius': '15px', 'padding': '5px', 'color': 'white'}">
       {{product.availabilityStatus}}
     </p>
     <p class="card-text" style="font-weight: bold; display: flex; flex-direction: column; min-height: 50px;">{{product.title}}</p>

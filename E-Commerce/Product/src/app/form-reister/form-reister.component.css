@@ -1,0 +1,50 @@
+/* Ensure that content starts below the header */
+body {
+  margin-top: 300px;
+}
+
+/* Ensure the form container has space between header and content */
+.form-container {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  margin: 30px auto;
+  width: 80%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 50px;
+  padding-top: 20px;
+}
+
+.fixed-top {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1030;
+}
+
+.navbar {
+  background-color: #e5e7e9;
+  box-shadow: 0 4px 6px rgba(7, 0, 0, 0.288);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px; /* Adjust the padding to control header height */
+}
+
+/* Additional styling for the navigation links */
+.navbar-nav .nav-link {
+  font-size: 1rem;
+  margin-right: 20px;
+  margin: 10px 0;
+  color: #000000;
+  transition: color 0.3s, background-color 0.3s;
+  text-decoration: none;
+}
+
+.navbar-nav .nav-link.active-link {
+  color: #08386e;
+  background-color: #f2eff3;
+  border-radius: 4px;
+  padding: 5px 10px;
+}
